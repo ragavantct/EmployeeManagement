@@ -1,0 +1,77 @@
+/* Container */
+.container {
+  padding: 20px;
+  background: #80b2fc;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #333;
+}
+
+/* Table box */
+.table-container {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header row */
+th {
+  background: #1976d2;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+/* Cells */
+td, th {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Row hover */
+tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s;
+}
+
+/* Status badge */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Buttons spacing */
+button {
+  margin-right: 8px;
+}

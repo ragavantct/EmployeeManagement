@@ -18,7 +18,8 @@ import { EmployeeDialogComponent } from '../employee-dialog/employee-dialog';
     MatButtonModule,
     MatDialogModule
   ],
-  templateUrl: './employee-list.html'
+  templateUrl: './employee-list.html',
+  styleUrl: './employee-list.css'
 })
 export class EmployeeListComponent {
 
@@ -38,6 +39,11 @@ export class EmployeeListComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log("RESULT:", result);
+      
+      //localStorage.setItem('employees', JSON.stringify(result));
+      //localStorage.setItem('employees', JSON.stringify(this.employees));
+
+
 
       if (result) {
         if (index != null) {
@@ -64,6 +70,7 @@ export class EmployeeListComponent {
   delete(i: number) {
     if (confirm('Delete this employee?')) {
       this.employees.splice(i, 1);
+
 
       //  refresh UI
       this.employees = [...this.employees];

@@ -19,7 +19,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatSelectModule
   ],
-  templateUrl: './employee-dialog.html'
+  templateUrl: './employee-dialog.html',
+  styleUrl: './employee-dialog.css'
 })
 export class EmployeeDialogComponent {
 
@@ -50,6 +51,8 @@ export class EmployeeDialogComponent {
 
   save() {
     this.dialogRef.close(this.form.value);
+    //console.log("Hello");
+    alert("Employee details saved successfully!");
   }
 
   close() {
