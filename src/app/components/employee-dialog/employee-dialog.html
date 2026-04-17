@@ -1,0 +1,62 @@
+<h3>Employee Form</h3>
+
+<form [formGroup]="form">
+
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+
+  
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Mobile</mat-label>
+    <input matInput formControlName="mobile">
+  </mat-form-field>
+
+  
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Department</mat-label>
+    <mat-select formControlName="department">
+      <mat-option value="HR">HR</mat-option>
+      <mat-option value="IT">IT</mat-option>
+      <mat-option value="Finance">Finance</mat-option>
+      <mat-option value="Sales">Sales</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Designation</mat-label>
+    <input matInput formControlName="designation">
+  </mat-form-field>
+
+  
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option value="Active">Active</mat-option>
+      <mat-option value="Inactive">Inactive</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Date of Joining</mat-label>
+    <input matInput type="date" formControlName="joiningDate">
+  </mat-form-field>
+
+  
+  <div style="margin-top:15px">
+    <button mat-raised-button color="primary" (click)="save()" [disabled]="form.invalid">
+      Save
+    </button>
+    <button mat-button (click)="close()">Cancel</button>
+  </div>
+
+</form>
